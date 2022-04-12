@@ -10,10 +10,10 @@ const Dashboard = () => {
       <Header />
       <h1 className="for-center">Dashboard</h1>
       <Routes>
-        <Route path="/*" element={<ProductList />} />
-        <Route path="/product/:productID" element={<ProductDetail />} />
+        <Route path="/" exact element={<ProductList />}>
+          <Route path=":productID" element={<ProductDetail />} />
+        </Route>
         <Route>404 NOT Found</Route>
-        <Route path="/dashboard/*"></Route>
       </Routes>
     </>
   );

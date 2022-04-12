@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
   const renderList = products.map((product) => {
-    const { id, image, title, price, category } = product;
+    const { id, title, image, price, category } = product;
+    // console.log(image);
     return (
       <div key={id}>
         <Link
-          to={"/product/${id}"}
+          to={`/product/${id}`}
           style={{ textDecoration: "none", color: "black" }}
         >
           <div className="card">

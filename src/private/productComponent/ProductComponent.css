@@ -19,9 +19,9 @@
   color: gray;
 }
 .image {
-  margin: 6px;
-  height: 75;
-  width: 75;
+  height: 12rem;
+  width: auto;
+  background: cover;
 }
 .text-link {
   color: inherit;
