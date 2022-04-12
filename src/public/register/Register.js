@@ -1,6 +1,7 @@
 import "./Register.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// import { Axios } from "axios";
 
 const Register = () => {
   // for input
@@ -23,6 +24,7 @@ const Register = () => {
     const newRecords = { ...user, id: new Date().getTime().toString() }; //   feeder
     setRecords([...records, newRecords]); //pushing
     console.log(records);
+    // postData();
     setUser({
       username: "",
       email: "",
@@ -30,6 +32,15 @@ const Register = () => {
       password: "",
     }); //empty input
   };
+  // const postData = () => {
+  //   Axios.post("http://localhost:8000/user")
+  //     .then((response) => {
+  //       return (response = records);
+  //     })
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // };
   return (
     <>
       <h2 className="for-center">Register</h2>
